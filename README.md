@@ -107,10 +107,11 @@ pip install -r requirements.txt
 If you use this dataset or any part of this project, please cite both the paper and this repository/dataset:
 
 **Paper:**  
-Subedi, P., Joshi, R., & Adhikari, M. (2026). Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal. *Applied and Environmental Soil Science*, 2026, Article 6678592. https://doi.org/10.1155/aess/6678592
+Subedi, P., Joshi, R., & Adhikari, M. (2026).
+Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal.
+*Applied and Environmental Soil Science*, 2026, Article 6678592.
+https://doi.org/10.1155/aess/6678592
 
-**Dataset / Repository:**  
-[Add Zenodo DOI here after upload]
 
 ---
 
