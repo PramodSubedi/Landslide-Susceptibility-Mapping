@@ -165,6 +165,31 @@ You are free to share and adapt the material as long as appropriate credit is gi
 
 See the [LICENSE](LICENSE) file for full details.
 
+## Zenodo DOI
+
+This project is versioned as `v1.0.0` and can be made citable via Zenodo.
+
+**To create a Zenodo DOI:**
+
+1. Go to https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping/settings/integrations
+2. Click "Connect to Zenodo" and authenticate your GitHub account
+3. Configure the integration:
+   - Repository: `PramodSubedi/Landslide-Susceptibility-Mapping`
+   - Trigger: "Create a new version on each Git tag push"
+4. Zenodo will automatically process the `v1.0.0` tag (already pushed to GitHub)
+5. A DOI will be generated and displayed on the repository page
+6. The DOI will appear at https://doi.org/XXXXXX
+
+**Your citation-ready reference:**
+
+```
+Subedi, P. (2026). Landslide Susceptibility Mapping – Udayapur District, Eastern Nepal (v1.0.0). GitHub. https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping. doi: 10.5281/zenodo.XXXXXX
+```
+
+Replace `10.5281/zenodo.XXXXXX` with the actual DOI once Zenodo processes it (typically within 5-10 minutes of tag push).
+
+This DOI will make your repository officially citable in research papers—a valuable asset for master's research assistantship applications.
+
 ---
 
 ## Contact
