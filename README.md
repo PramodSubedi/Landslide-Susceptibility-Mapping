@@ -2,7 +2,7 @@
 
 **GIS | Landslide Susceptibility Mapping | Frequency Ratio (FR) Method | Open Research Project**
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
@@ -38,8 +38,8 @@ https://doi.org/10.1155/aess/6678592
 ## Project Structure
 
 ```text
-Landslide_Susceptibility_Udayapur_FR/
-├── 00_README.md
+Landslide_Susceptibility_Mapping/
+├── README.md
 ├── LICENSE
 ├── requirements.txt
 ├── 01_Documentation/
@@ -63,8 +63,8 @@ Landslide_Susceptibility_Udayapur_FR/
 │   ├── Factor_maps/
 │   └── Final susceptibility maps
 ├── 06_Python_Notebook/  # Replication notebook
-├── 07_ArcGIS_Project/   # Original ArcGIS project (optional)
 └── src/                 # Helper Python functions
+```
 
 ## Conditioning Factors Used
 
@@ -84,9 +84,50 @@ All factors were processed at **30 m** resolution.
 
 ---
 
+## What the AUC Measures
+
+The Area Under the Curve (AUC) of the Receiver Operating Characteristic (ROC) curve measures the model's ability to distinguish between landslide and non-landslide areas:
+
+- **AUC = 1.0**: Perfect classification - the model perfectly separates landslides from non-landslides.
+- **AUC = 0.5**: No discrimination - the model performs no better than random chance.
+- **AUC range**: Typically between 0.5 and 1.0 for useful models.
+
+In this project, AUC = 0.767 (original) / 0.822 (corrected notebook) indicates good but not excellent discriminative power. The model ranks a randomly selected landslide pixel higher than a randomly selected non-landslide pixel about 76.7% / 82.2% of the time.
+
+**Interpretation guidelines:**
+- 0.9-1.0: Excellent
+- 0.8-0.9: Good
+- 0.7-0.8: Acceptable
+- 0.6-0.7: Poor
+- 0.5-0.6: Fail
+
+## Limitations
+
+- Rainfall data (CRU) has relatively coarse resolution (~50 km), which may not capture local rainfall-triggered landslides.
+- Frequency Ratio is a bivariate statistical method and does not account for interactions between conditioning factors.
+- The model was developed for Udayapur District; applicability to other regions with different geomorphological settings should be validated.
+- 3 landslides were excluded during data cleaning, reducing the count from 211 to 208 points AUC 0.822.
+- The 5-class Jenks Natural Breaks classification uses Jenks optimization which can be sensitive to outlier values.
+- AUC values are dependent on the train/test split; different splits may yield different performance.
+
 ## How to Use This Project
 
-1. Clone or download the repository  
+1. Clone or download the repository
+3. Ensure Python 3.9+ is being used (this project was verified with Python 3.10.9)
+
+4. (Optional) Run the notebook top-to-bottom using nbconvert:
+
+```bash
+jupyter nbconvert --to notebook --execute --inplace 06_Python_Notebook/*.ipynb
+```
+
+Or with a fixed seed:
+
+```bash
+python -c "import random; random.seed(42)" && jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=120 06_Python_Notebook/*.ipynb
+```
+
+5. Explore the data:  
 2. Install Python dependencies:
 
 ```bash
@@ -117,7 +158,9 @@ https://doi.org/10.1155/aess/6678592
 
 ## License
 
-This project is released under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.  
+This project uses a dual-license approach:
+- **Code and software** (Python notebooks, scripts, and helper functions in `src/`) are released under the **MIT license** (see [LICENSE](LICENSE) file).
+- **Data and documentation** (raw inventory files, processed conditioning factors, maps, and this README) are released under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.  
 You are free to share and adapt the material as long as appropriate credit is given.
 
 See the [LICENSE](LICENSE) file for full details.

@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: "Landslide Susceptibility Mapping - Udayapur District, Eastern Nepal"
+type: publiclicence
+authors:
+  - name: Pramod Subedi
+    email: pramod.subedi.np@gmail.com
+  - name: Rajeev Joshi
+  - name: Mandip Adhikari
+keywords:
+  - landslide susceptibility
+  - frequency ratio
+  - GIS
+  - Udayapur
+  - Nepal
+version: 1.0.0
+date-released: 2026-01-01
+DOI: 10.1155/aess/6678592
+abstract: |
+  This repository contains the data, methodology, and results of a landslide susceptibility mapping study
+  conducted in Udayapur District, Eastern Nepal, using the GIS-based Frequency Ratio (FR) method.
+  The work was originally performed in ArcGIS and is now organized as an open, reproducible research project.
+  Code is released under the MIT license; data and documentation are released under CC BY 4.0.
+  https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping
+references:
+  - type: paper
+    title: "Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal"
+    authors:
+      - Subedi, Pramod
+      - Joshi, Rajeev
+      - Adhikari, Mandip
+    year: 2026
+    journal: "Applied and Environmental Soil Science"
+    doi: 10.1155/aess/6678592
