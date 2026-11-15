@@ -1,0 +1,120 @@
+# NOTICE - Third-Party Licenses
+
+This project uses the following third-party software:
+
+## rasterio
+- **License:** MIT License
+- **Version:** 1.3.9
+- **Source:** https://pypi.org/project/rasterio/
+- **Attribution:** Copyright (c) 2011-2023, rasterio contributors
+
+## geopandas
+- **License:** BSD-3-Clause License
+- **Version:** 0.14.2
+- **Source:** https://pypi.org/project/geopandas/
+- **Attribution:** Copyright (c) 2013-2023, geopandas development team
+
+## numpy
+- **License:** BSD-3-Clause License
+- **Version:** 1.24.3
+- **Source:** https://pypi.org/project/numpy/
+- **Attribution:** Copyright (c) 2005-2023, NumPy Developers
+
+## pandas
+- **License:** BSD-3-Clause License
+- **Version:** 2.0.3
+- **Source:** https://pypi.org/project/pandas/
+- **Attribution:** Copyright (c) 2008-2023, pandas development team
+
+## scikit-learn
+- **License:** BSD-3-Clause License
+- **Version:** 1.3.2
+- **Source:** https://pypi.org/project/scikit-learn/
+- **Attribution:** Copyright (c) 2010-2023, scikit-learn developers
+
+## matplotlib
+- **License:** Python Software Foundation License 2.0
+- **Version:** 3.7.0
+- **Source:** https://pypi.org/project/matplotlib/
+- **Attribution:** Copyright (c) 2002-2023, The Matplotlib Development Team
+
+## seaborn
+- **License:** BSD-3-Clause License
+- **Version:** 0.13.0
+- **Source:** https://pypi.org/project/seaborn/
+- **Attribution:** Copyright (c) 2011-2023, seaborn developers
+
+## jenkspy
+- **License:** MIT License
+- **Version:** 0.4.2
+- **Source:** https://pypi.org/project/jenkspy/
+- **Attribution:** Copyright (c) 2017-2023, jenkspy contributors
+
+## shapely
+- **License:** BSD-3-Clause License
+- **Version:** 2.0.1
+- **Source:** https://pypi.org/project/shapely/
+- **Attribution:** Copyright (c) 2011-2023, shapely contributors
+
+## fiona
+- **License:** BSD-3-Clause License
+- **Version:** 1.9.0.post1
+- **Source:** https://pypi.org/project/fiona/
+- **Attribution:** Copyright (c) 2013-2023, fiona contributors
+
+## pyproj
+- **License:** MIT License
+- **Version:** 3.6.1
+- **Source:** https://pypi.org/project/pyproj/
+- **Attribution:** Copyright (c) 2002-2023, pyproj contributors
+
+## contextily
+- **License:** MIT License
+- **Version:** 1.4.1
+- **Source:** https://pypi.org/project/contextily/
+- **Attribution:** Copyright (c) 2016-2023, contextily contributors
+
+## jupyter
+- **License:** BSD-3-Clause License
+- **Version:** 1.0.0
+- **Source:** https://pypi.org/project/jupyter/
+- **Attribution:** Copyright (c) 2001-2023, Jupyter Project
+
+## notebook
+- **License:** BSD-3-Clause License
+- **Version:** 7.0.12
+- **Source:** https://pypi.org/project/notebook/
+- **Attribution:** Copyright (c) 2008-2023, Jupyter Development Team
+
+## ipykernel
+- **License:** BSD-3-Clause License
+- **Version:** 6.29.4
+- **Source:** https://pypi.org/project/ipykernel/
+- **Attribution:** Copyright (c) 2008-2023, ipykernel developers
+
+---
+
+# Project Licenses
+
+## Code and Software (MIT License)
+All Python scripts, notebooks, and helper functions in `src/` are released under the MIT license. See the `LICENSE` file for full terms.
+
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Data and Documentation (CC BY 4.0)
+Raw inventory files, processed conditioning factors, maps, and this README are released under the Creative Commons Attribution 4.0 International license.
+
+> You are free to share and adapt the material for any purpose, even commercially, as long as appropriate credit is given to the original creator. For more information, see https://creativecommons.org/licenses/by/4.0/
+
+---
+
+# Contact
+
+**Pramod Subedi**  
+Email: pramod.subedi.np@gmail.com  
+GitHub: https://github.com/PramodSubedi  
+Website: https://www.pramods.com.np
