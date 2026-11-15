@@ -192,6 +192,32 @@ This DOI will make your repository officially citable in research papers—a val
 
 ---
 
+## Results Showcase
+
+### Landslide Susceptibility Map
+
+![Landslide Susceptibility Map](https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping/raw/main/05_Maps_Figures/Final%20susceptibility%20maps/LSI_5_Classes.png)
+
+**Figure 1.** Landslide susceptibility map of Udayapur District, Eastern Nepal. Classes: Very Low, Low, Moderate, High, Very High (Jenks Natural Breaks).  
+**Performance:** AUC = 0.822 (corrected open-source notebook) / 0.767 (published paper).  
+**Study area:** Udayapur District, Nepal. **Resolution:** 30 m. **Coordinate system:** WGS 84 / UTM Zone 45N (EPSG:32645).  
+**Landslide inventory:** 211 field-verified landslides (original) / 208 points (corrected notebook).
+
+### Key Results Summary
+
+| Metric | Value |
+|--------|-------|
+| Landslides (original) | 211 field-verified |
+| Landslides (corrected) | 208 points |
+| AUC (original paper) | 0.767 |
+| AUC (corrected notebook) | 0.822 |
+| Classification method | Jenks Natural Breaks (5 classes) |
+| Resolution | 30 m |
+| Coordinate system | WGS 84 / UTM Zone 45N (EPSG:32645) |
+| Conditioning factors | 11 factors (elevation, slope, aspect, curvature, TWI, geology, soil, LULC, rainfall, distance to river, distance to road) |
+
+---
+
 ## Contact
 
 **Pramod Subedi**  
