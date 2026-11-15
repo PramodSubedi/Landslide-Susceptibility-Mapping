@@ -1,226 +1,127 @@
 # Landslide Susceptibility Mapping – Udayapur District, Eastern Nepal
 
-**GIS | Landslide Susceptibility Mapping | Frequency Ratio (FR) Method | Open Research Project**
+[![DOI](https://img.shields.io/badge/DOI-10.1155%2Faess%2F6678592-blue)](https://doi.org/10.1155/aess/6678592)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](NOTICE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
+**GIS-based Frequency Ratio landslide susceptibility mapping of Udayapur District, Eastern Nepal**
+Complete open data, methodology, results, and reproducible Python workflow.
 
----
-
-## Overview
-
-This repository contains the complete data, methodology, and results of a landslide susceptibility mapping study conducted in **Udayapur District, Eastern Nepal**, using the GIS-based **Frequency Ratio (FR)** method.
-
-The work was originally performed in ArcGIS and is now organized as an open, reproducible research project.
-
-### Associated Publication
-
-**Subedi, P., Devkota, U., Adhikari, S., Baral, D., Adhikari, M., & Joshi, R. (2026).**  
-Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal.  
-*Applied and Environmental Soil Science*, 2026, Article 6678592.  
-https://doi.org/10.1155/aess/6678592
+> Associated publication:
+> Subedi, P., Devkota, U., Adhikari, S., Baral, D., Adhikari, M., & Joshi, R. (2026).
+> Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal.
+> Applied and Environmental Soil Science, 2026, Article 6678592.
+> https://doi.org/10.1155/aess/6678592
 
 ---
 
 ## Key Results
 
-| Item                        | Detail                              |
-|----------------------------|-------------------------------------|
-| Study Area                 | Udayapur District, Eastern Nepal    |
-| Landslide Inventory        | 211 field-verified landslides       |
-| Method                     | Frequency Ratio (FR)                |
-| Model Performance (AUC)    | 0.767                               |
-| Classification             | 5 classes (Jenks Natural Breaks)    |
-| Resolution                 | 30 m                                |
-| Coordinate System          | WGS 84 / UTM Zone 45N (EPSG:32645)  |
+| Item                       | Value                                      |
+|----------------------------|--------------------------------------------|
+| Study Area                 | Udayapur District, Eastern Nepal           |
+| Landslide Inventory        | 211 field-verified                         |
+| Method                     | Frequency Ratio (FR)                       |
+| Model Performance (AUC)    | 0.767                                      |
+| Classification             | 5 classes (Jenks Natural Breaks)           |
+| Resolution                 | 30 m                                       |
+| Coordinate System          | WGS 84 / UTM Zone 45N (EPSG:32645)         |
+| Conditioning Factors       | 11                                         |
+
+---
+
+## Quick Links
+
+- **Paper**: [DOI 10.1155/aess/6678592](https://doi.org/10.1155/aess/6678592)
+- **Reproduce the analysis**: [QUICK_START.md](QUICK_START.md)
+- **Methodology**: [01_Documentation/Methodology_Summary.md](01_Documentation/Methodology_Summary.md)
+- **Data Sources & Dictionary**: [01_Documentation/Data_Sources_and_Dictionary.md](01_Documentation/Data_Sources_and_Dictionary.md)
+- **Final Maps**: [05_Maps_Figures](05_Maps_Figures)
+- **Python Notebook**: [06_Python_Notebook](06_Python_Notebook)
 
 ---
 
 ## Project Structure
 
 ```text
-Landslide_Susceptibility_Mapping/
-├── README.md
-├── LICENSE
+Landslide-Susceptibility-Mapping/
+├── 01_Documentation/          # Methodology, processing notes, data dictionary
+├── 02_Raw_Data/               # Original DEM, inventory, geology, soil, rivers, roads
+├── 03_Processed_Data/         # 30 m factors, FR tables, train/test splits
+├── 04_Results/                # Continuous LSI, 5-class map, AUC, reconciliation
+├── 05_Maps_Figures/           # All publication-ready figures
+├── 06_Python_Notebook/        # Fully reproducible Frequency Ratio notebook
+├── src/                       # Helper functions
+├── LICENSE                    # MIT (code)
+├── NOTICE                     # CC BY 4.0 (data & documentation)
 ├── requirements.txt
-├── 01_Documentation/
-│   ├── Methodology_Summary.md
-│   └── Processing_Notes.md
-├── 02_Raw_Data/
-│   ├── DEM/
-│   ├── Inventory/
-│   ├── Study Area/
-│   ├── Vector/          # Geology, Soil, River, Road
-│   └── Raster/          # (if any original rasters)
-├── 03_Processed_Data/
-│   ├── Factors_30m/     # All conditioning factors at 30 m
-│   ├── FR_Tables/       # Frequency Ratio values
-│   └── Inventory/       # Training & Testing splits
-├── 04_Results/
-│   ├── LSI_Continuous/
-│   ├── Classified_5_Classes/
-│   └── AUC/
-├── 05_Maps_Figures/
-│   ├── Factor_maps/
-│   └── Final susceptibility maps
-├── 06_Python_Notebook/  # Replication notebook
-└── src/                 # Helper Python functions
+├── QUICK_START.md
+└── CITATION.cff
 ```
-
-## Conditioning Factors Used
-
-- Elevation  
-- Slope  
-- Aspect  
-- Curvature  
-- Topographic Wetness Index (TWI)  
-- Geology  
-- Soil  
-- Land Use / Land Cover (LULC)  
-- Rainfall  
-- Distance to River  
-- Distance to Road  
-
-All factors were processed at **30 m** resolution.
 
 ---
 
-## What the AUC Measures
+## Conditioning Factors
 
-The Area Under the Curve (AUC) of the Receiver Operating Characteristic (ROC) curve measures the model's ability to distinguish between landslide and non-landslide areas:
+Elevation • Slope • Aspect • Curvature • Topographic Wetness Index (TWI) • Geology • Soil • Land Use / Land Cover (LULC) • Rainfall • Distance to River • Distance to Road
 
-- **AUC = 1.0**: Perfect classification - the model perfectly separates landslides from non-landslides.
-- **AUC = 0.5**: No discrimination - the model performs no better than random chance.
-- **AUC range**: Typically between 0.5 and 1.0 for useful models.
+All factors processed at **30 m** resolution.
 
-In this project, AUC = 0.767 (original) / 0.822 (corrected notebook) indicates good but not excellent discriminative power. The model ranks a randomly selected landslide pixel higher than a randomly selected non-landslide pixel about 76.7% / 82.2% of the time.
+---
 
-**Interpretation guidelines:**
-- 0.9-1.0: Excellent
-- 0.8-0.9: Good
-- 0.7-0.8: Acceptable
-- 0.6-0.7: Poor
-- 0.5-0.6: Fail
+## How to Reproduce
 
-## Limitations
+1. Clone the repository
+2. Create a virtual environment and install dependencies (`pip install -r requirements.txt`)
+3. Follow the instructions in [QUICK_START.md](QUICK_START.md)
 
-- Rainfall data (CRU) has relatively coarse resolution (~50 km), which may not capture local rainfall-triggered landslides.
-- Frequency Ratio is a bivariate statistical method and does not account for interactions between conditioning factors.
-- The model was developed for Udayapur District; applicability to other regions with different geomorphological settings should be validated.
-- 3 landslides were excluded during data cleaning, reducing the count from 211 to 208 points AUC 0.822.
-- The 5-class Jenks Natural Breaks classification uses Jenks optimization which can be sensitive to outlier values.
-- AUC values are dependent on the train/test split; different splits may yield different performance.
+The notebook fully reproduces the Frequency Ratio workflow using open-source Python libraries (rasterio, geopandas, etc.).
 
-## How to Use This Project
+**Expected runtime**: ~2 hours
+**Python version**: 3.9+ (verified with 3.10.9)
 
-1. Clone or download the repository
-3. Ensure Python 3.9+ is being used (this project was verified with Python 3.10.9)
+---
 
-4. (Optional) Run the notebook top-to-bottom using nbconvert:
+## Validation Note
 
-```bash
-jupyter nbconvert --to notebook --execute --inplace 06_Python_Notebook/*.ipynb
-```
+- **Published paper**: 211 landslides, AUC = 0.767
+- **Corrected open-source notebook**: 208 landslides (after data cleaning), AUC = 0.822
 
-Or with a fixed seed:
-
-```bash
-python -c "import random; random.seed(42)" && jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=120 06_Python_Notebook/*.ipynb
-```
-
-5. Explore the data:  
-2. Install Python dependencies:
-
-```bash
-pip install -r requirements.txt
-
-3. Explore the data:
-   - Raw data → `02_Raw_Data/`
-   - Processed 30 m factors → `03_Processed_Data/Factors_30m/`
-   - Final results → `04_Results/`
-
-4. (Optional) Run the Python replication notebook  
-   Open the notebook inside `06_Python_Notebook/` to reproduce the Frequency Ratio workflow using open-source tools.
+Both results are valid. See [04_Results/RECONCILIATION.md](04_Results/RECONCILIATION.md) for details.
 
 ---
 
 ## Citation
 
-If you use this dataset or any part of this project, please cite both the paper and this repository/dataset:
+**Paper**
+```bibtex
+@article{Subedi2026,
+  author  = {Subedi, Pramod and Devkota, Utpal and Adhikari, Saraswoti and Baral, Deepa and Adhikari, Mandip and Joshi, Rajeev},
+  title   = {Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal},
+  journal = {Applied and Environmental Soil Science},
+  year    = {2026},
+  volume  = {2026},
+  pages   = {6678592},
+  doi     = {10.1155/aess/6678592}
+}
+```
 
-**Paper:**  
-Subedi, P., Devkota, U., Adhikari, S., Baral, D., Adhikari, M., & Joshi, R. (2026).
-Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal.
-*Applied and Environmental Soil Science*, 2026, Article 6678592.
-https://doi.org/10.1155/aess/6678592
-
+**Dataset / Repository** (update with Zenodo DOI once available)
+Subedi, P. (2026). Landslide Susceptibility Mapping – Udayapur District, Eastern Nepal (v1.0.0). GitHub. https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping
 
 ---
 
 ## License
 
-This project uses a dual-license approach:
-- **Code and software** (Python notebooks, scripts, and helper functions in `src/`) are released under the **MIT license** (see [LICENSE](LICENSE) file).
-- **Data and documentation** (raw inventory files, processed conditioning factors, maps, and this README) are released under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.  
-You are free to share and adapt the material as long as appropriate credit is given.
-
-See the [LICENSE](LICENSE) file for full details.
-
-## Zenodo DOI
-
-This project is versioned as `v1.0.0` and can be made citable via Zenodo.
-
-**To create a Zenodo DOI:**
-
-1. Go to https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping/settings/integrations
-2. Click "Connect to Zenodo" and authenticate your GitHub account
-3. Configure the integration:
-   - Repository: `PramodSubedi/Landslide-Susceptibility-Mapping`
-   - Trigger: "Create a new version on each Git tag push"
-4. Zenodo will automatically process the `v1.0.0` tag (already pushed to GitHub)
-5. A DOI will be generated and displayed on the repository page
-6. The DOI will appear at https://doi.org/XXXXXX
-
-**Your citation-ready reference:**
-
-```
-Subedi, P. (2026). Landslide Susceptibility Mapping – Udayapur District, Eastern Nepal (v1.0.0). GitHub. https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping. doi: 10.5281/zenodo.XXXXXX
-```
-
-Replace `10.5281/zenodo.XXXXXX` with the actual DOI once Zenodo processes it (typically within 5-10 minutes of tag push).
-
-This DOI will make your repository officially citable in research papers—a valuable asset for master's research assistantship applications.
-
----
-
-## Results Showcase
-
-### Landslide Susceptibility Map
-
-![Landslide Susceptibility Map](https://github.com/PramodSubedi/Landslide-Susceptibility-Mapping/raw/main/05_Maps_Figures/Final%20susceptibility%20maps/LSI_5_Classes.png)
-
-**Figure 1.** Landslide susceptibility map of Udayapur District, Eastern Nepal. Classes: Very Low, Low, Moderate, High, Very High (Jenks Natural Breaks).  
-**Performance:** AUC = 0.822 (corrected open-source notebook) / 0.767 (published paper).  
-**Study area:** Udayapur District, Nepal. **Resolution:** 30 m. **Coordinate system:** WGS 84 / UTM Zone 45N (EPSG:32645).  
-**Landslide inventory:** 211 field-verified landslides (original) / 208 points (corrected notebook).
-
-### Key Results Summary
-
-| Metric | Value |
-|--------|-------|
-| Landslides (original) | 211 field-verified |
-| Landslides (corrected) | 208 points |
-| AUC (original paper) | 0.767 |
-| AUC (corrected notebook) | 0.822 |
-| Classification method | Jenks Natural Breaks (5 classes) |
-| Resolution | 30 m |
-| Coordinate system | WGS 84 / UTM Zone 45N (EPSG:32645) |
-| Conditioning factors | 11 factors (elevation, slope, aspect, curvature, TWI, geology, soil, LULC, rainfall, distance to river, distance to road) |
+- **Code** (notebooks, `src/`): [MIT License](LICENSE)
+- **Data and documentation**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](NOTICE)
 
 ---
 
 ## Contact
 
-**Pramod Subedi**  
-Email: pramod.subedi.np@gmail.com  
-Website: https://www.pramods.com.np  
+**Pramod Subedi**
+Email: pramod.subedi.np@gmail.com
+Website: https://www.pramods.com.np
 GitHub: https://github.com/PramodSubedi
