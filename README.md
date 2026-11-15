@@ -14,7 +14,7 @@ The work was originally performed in ArcGIS and is now organized as an open, rep
 
 ### Associated Publication
 
-**Subedi, P., Joshi, R., & Adhikari, M. (2026).**  
+**Subedi, P., Devkota, U., Adhikari, S., Baral, D., Adhikari, M., & Joshi, R. (2026).**  
 Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal.  
 *Applied and Environmental Soil Science*, 2026, Article 6678592.  
 https://doi.org/10.1155/aess/6678592
@@ -148,7 +148,7 @@ pip install -r requirements.txt
 If you use this dataset or any part of this project, please cite both the paper and this repository/dataset:
 
 **Paper:**  
-Subedi, P., Joshi, R., & Adhikari, M. (2026).
+Subedi, P., Devkota, U., Adhikari, S., Baral, D., Adhikari, M., & Joshi, R. (2026).
 Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal.
 *Applied and Environmental Soil Science*, 2026, Article 6678592.
 https://doi.org/10.1155/aess/6678592

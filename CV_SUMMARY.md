@@ -47,7 +47,7 @@ Reproducible GIS research implementing a **Frequency Ratio (FR) landslide suscep
 
 **Citation:**
 ```
-Subedi, P., Joshi, R., & Adhikari, M. (2026). 
+Subedi, P., Devkota, U., Adhikari, S., Baral, D., Adhikari, M., & Joshi, R. (2026). 
 Landslide Susceptibility Mapping Using GIS-Based Frequency Ratio Method in Eastern Nepal. 
 Applied and Environmental Soil Science, 6678592. 
 https://doi.org/10.1155/aess/6678592
